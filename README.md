@@ -1,0 +1,1 @@
+# Wyvern Child - A Starter Child Theme for the Wyvern Framework
