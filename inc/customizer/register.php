@@ -44,7 +44,6 @@ function wyvern_child_customizer_theme_settings_panel( $wp_customize ) {
 		)
     );
 
-<<<<<<< HEAD
 	$wp_customize->add_section(
 		'wyvern_child_theme_settings_footer',
 		array(
@@ -75,41 +74,6 @@ function wyvern_child_customizer_theme_settings_panel( $wp_customize ) {
             'type' => 'checkbox',
             'section' => 'wyvern_child_theme_settings_general',
         ) 
-=======
-    /* DISABLING UNTIL FULLY DEVELOPED
-        $wp_customize->add_section(
-            'wyvern_child_theme_settings_newsletter',
-            array(
-                'title'       => __( 'Newsletter', 'wyvern' ),
-                'description' => __( 'Controls the display of the Newsletter Signup Block', 'wyvern' ),
-                'capability'  => 'edit_theme_options',
-                'panel'       => 'wyvern_child_theme_settings',
-                'priority'    => 40,
-            )
-        );
-
-        $wp_customize->add_section(
-            'wyvern_child_theme_settings_single_posts',
-            array(
-                'title'       => __( 'Single Posts', 'wyvern' ),
-                'description' => __( 'Features for single posts.', 'wyvern' ),
-                'capability'  => 'edit_theme_options',
-                'panel'       => 'wyvern_child_theme_settings',
-                'priority'    => 40,
-            )
-        );
-    */
-
-	$wp_customize->add_section(
-		'wyvern_child_theme_settings_footer',
-		array(
-			'title'       => __( 'Footer', 'wyvern' ),
-			'description' => __( 'Footer Information', 'wyvern' ),
-            'capability'  => 'edit_theme_options',
-            'panel'       => 'wyvern_child_theme_settings',
-			'priority'    => 40,
-		)
->>>>>>> parent of f3111e9... Catching up
     );
 
     // Setting: Cookie Notice Text
@@ -222,15 +186,9 @@ function wyvern_child_customizer_theme_settings_panel( $wp_customize ) {
         ) 
     );
 
-<<<<<<< HEAD
     // Setting: Twitter Default Text
     $wp_customize->add_setting( 
         'twitter_default_text', 
-=======
-    // Setting: Instagram Link
-    $wp_customize->add_setting( 
-        'instagram_link', 
->>>>>>> parent of f3111e9... Catching up
         array(
             'type' => 'theme_mod',
             'capability' => 'edit_theme_options',
@@ -239,7 +197,6 @@ function wyvern_child_customizer_theme_settings_panel( $wp_customize ) {
         )
     );
 
-<<<<<<< HEAD
     // Control: Twitter Default Text
     $wp_customize->add_control( 
         'twitter_default_text', 
@@ -270,7 +227,20 @@ function wyvern_child_customizer_theme_settings_panel( $wp_customize ) {
             'description' => __( 'Separate with commas (no spaces). These hashtags will appear appended to tweets by default.', 'wyvern' ),
             'type' => 'text',
             'section' => 'wyvern_child_theme_settings_social_media',
-=======
+        ) 
+    );
+
+    // Setting: Instagram Link
+    $wp_customize->add_setting( 
+        'instagram_link', 
+        array(
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options',
+            'transport' => 'refresh',
+            'sanitize_callback' => 'esc_url',
+        )
+    );
+
     // Control: Instagram Link
     $wp_customize->add_control( 
         'instagram_link', 
@@ -279,7 +249,6 @@ function wyvern_child_customizer_theme_settings_panel( $wp_customize ) {
             'description' => __( 'Link your Instagram page here. Used throughout the site.', 'wyvern' ),
             'type' => 'text',
             'section' => 'wyvern_child_theme_settings_social_media',
->>>>>>> parent of f3111e9... Catching up
         ) 
     );
 
@@ -298,31 +267,6 @@ function wyvern_child_customizer_theme_settings_panel( $wp_customize ) {
     $wp_customize->add_control( 
         'github_link', 
         array(
-<<<<<<< HEAD
-            'label' => __( 'Instagram Link', 'wyvern' ),
-            'description' => __( 'Link your Instagram page here. Used throughout the site.', 'wyvern' ),
-            'type' => 'text',
-            'section' => 'wyvern_child_theme_settings_social_media',
-        ) 
-    );
-
-    // Setting: GitHub Link
-    $wp_customize->add_setting( 
-        'github_link', 
-        array(
-            'type' => 'theme_mod',
-            'capability' => 'edit_theme_options',
-            'transport' => 'refresh',
-            'sanitize_callback' => 'esc_url',
-        )
-    );
-
-    // Control: GitHub Link
-    $wp_customize->add_control( 
-        'github_link', 
-        array(
-=======
->>>>>>> parent of f3111e9... Catching up
             'label' => __( 'GitHub Link', 'wyvern' ),
             'description' => __( 'Link your GitHub page here. Used throughout the site.', 'wyvern' ),
             'type' => 'text',
@@ -347,8 +291,6 @@ function wyvern_child_customizer_theme_settings_panel( $wp_customize ) {
         array(
             'label' => __( 'YouTube Link', 'wyvern' ),
             'description' => __( 'Link your YouTube page here. Used throughout the site.', 'wyvern' ),
-<<<<<<< HEAD
-=======
             'type' => 'text',
             'section' => 'wyvern_child_theme_settings_social_media',
         ) 
@@ -371,37 +313,11 @@ function wyvern_child_customizer_theme_settings_panel( $wp_customize ) {
         array(
             'label' => __( 'Twitch Link', 'wyvern' ),
             'description' => __( 'Link your Twitch page here. Used throughout the site.', 'wyvern' ),
->>>>>>> parent of f3111e9... Catching up
             'type' => 'text',
             'section' => 'wyvern_child_theme_settings_social_media',
         ) 
     );
 
-<<<<<<< HEAD
-    // Setting: Twitch Link
-    $wp_customize->add_setting( 
-        'twitch_link', 
-        array(
-            'type' => 'theme_mod',
-            'capability' => 'edit_theme_options',
-            'transport' => 'refresh',
-            'sanitize_callback' => 'esc_url',
-        )
-    );
-
-    // Control: Twitch Link
-    $wp_customize->add_control( 
-        'twitch_link', 
-        array(
-            'label' => __( 'Twitch Link', 'wyvern' ),
-            'description' => __( 'Link your Twitch page here. Used throughout the site.', 'wyvern' ),
-            'type' => 'text',
-            'section' => 'wyvern_child_theme_settings_social_media',
-        ) 
-    );
-
-=======
->>>>>>> parent of f3111e9... Catching up
     /* DISABLING UNTIL FULLY DEVELOPED
         // Setting: Newsletter Signup Form Name
         $wp_customize->add_setting( 
